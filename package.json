@@ -1,6 +1,6 @@
 {
   "name": "postcss-functional-css",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "description": "PostCSS Functional CSS will help you to generate functional css.",
   "keywords": [
     "postcss",
@@ -10,11 +10,11 @@
   ],
   "author": "Eduárd Pocstár <admdh.com@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/shiwaforce/postcss-high-contrast",
+  "repository": "https://github.com/iamfrntdv/postcss-functional-css",
   "bugs": {
-    "url": "https://github.com/shiwaforce/postcss-high-contrast/issues"
+    "url": "https://github.com/iamfrntdv/postcss-functional-css/issues"
   },
-  "homepage": "https://github.com/shiwaforce/postcss-high-contrast",
+  "homepage": "https://github.com/iamfrntdv/postcss-functional-css",
   "dependencies": {
     "postcss": "^7.0.13"
   },
