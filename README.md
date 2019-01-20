@@ -29,7 +29,7 @@ postcss([
       display: true,
       float: true,
       fontSize: [12, 14, 16, 18, 24, 32, 48],
-      fontWeight: ['400', '500', '600', '700'], 
+      fontWeight: [400, 500, 600, 700], 
       lineHeight: [16, 18, 20, 22, 28, 36, 52],
       margin: [4, 8, 16, 24],
       objectFit: true,
@@ -360,3 +360,4 @@ features: {
 - automatically generate margins
 - automatically generate padding
 - grid?
+- more features
