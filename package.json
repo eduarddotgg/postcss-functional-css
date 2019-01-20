@@ -1,0 +1,36 @@
+{
+  "name": "postcss-functional-css",
+  "version": "1.6.1",
+  "description": "PostCSS Functional CSS will help you to generate functional css.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "functional css"
+  ],
+  "author": "Eduárd Pocstár <admdh.com@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/shiwaforce/postcss-high-contrast",
+  "bugs": {
+    "url": "https://github.com/shiwaforce/postcss-high-contrast/issues"
+  },
+  "homepage": "https://github.com/shiwaforce/postcss-high-contrast",
+  "dependencies": {
+    "postcss": "^7.0.13"
+  },
+  "devDependencies": {
+    "ava": "^1.1.0",
+    "eslint": "^5.12.1",
+    "eslint-config-postcss": "^3.0.7"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "ava && eslint test/test.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
