@@ -57,130 +57,155 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
     }
   }, opts);
 
-  return root => {
-    options.mediaQueries.forEach(item => {
-      root.append({
-        name: 'media', params: item.params
+  return css => {
+    if (css.type === 'root' && options.globalStyles) {
+
+      if (options.features.display) {
+        css.append(display({prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.float) {
+        css.append(float({prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.fontSize) {
+        css.append(fontSize(options.features.fontSize, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.fontWeight) {
+        css.append(fontWeight(options.features.fontWeight, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.lineHeight) {
+        css.append(lineHeight(options.features.lineHeight, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.margin && options.features.margin.top) {
+        css.append(margin('top', options.features.margin.top, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.margin && options.features.margin.right) {
+        css.append(margin('right', options.features.margin.right, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.margin && options.features.margin.bottom) {
+        css.append(margin('bottom', options.features.margin.bottom, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.margin && options.features.margin.left) {
+        css.append(margin('left', options.features.margin.left, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.opacity) {
+        css.append(opacity(options.features.opacity, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.padding && options.features.padding.top) {
+        css.append(padding('top', options.features.padding.top, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.padding && options.features.padding.right) {
+        css.append(padding('right', options.features.padding.right, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.padding && options.features.padding.bottom) {
+        css.append(padding('bottom', options.features.padding.bottom, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.padding && options.features.padding.left) {
+        css.append(padding('left', options.features.padding.left, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.textAlignment) {
+        css.append(textAlignment({prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.textSize) {
+        css.append(textSize(options.features.textSize, {prefix: '', prefixSeparator: ''}, global));
+      }
+
+      if (options.features.zIndex) {
+        css.append(zIndex(options.features.zIndex, {prefix: '', prefixSeparator: ''}, global));
+      }
+    }
+
+    options.mediaQueries.forEach(media => {
+      const atRule = postcss.atRule({
+        name: 'media',
+        params: media.params
       });
+
+      if (options.features.display) {
+        atRule.append(display(media));
+      }
+
+      if (options.features.float) {
+        atRule.append(float(media));
+      }
+
+      if (options.features.fontSize) {
+        atRule.append(fontSize(options.features.fontSize, media));
+      }
+
+      if (options.features.fontWeight) {
+        atRule.append(fontWeight(options.features.fontWeight, media));
+      }
+
+      if (options.features.lineHeight) {
+        atRule.append(lineHeight(options.features.lineHeight, media));
+      }
+
+      if (options.features.margin && options.features.margin.top) {
+        atRule.append(margin('top', options.features.margin.top, media));
+      }
+
+      if (options.features.margin && options.features.margin.right) {
+        atRule.append(margin('right', options.features.margin.right, media));
+      }
+
+      if (options.features.margin && options.features.margin.bottom) {
+        atRule.append(margin('bottom', options.features.margin.bottom, media));
+      }
+
+      if (options.features.margin && options.features.margin.left) {
+        atRule.append(margin('left', options.features.margin.left, media));
+      }
+
+      if (options.features.opacity) {
+        atRule.append(opacity(options.features.opacity, media));
+      }
+
+      if (options.features.padding && options.features.padding.top) {
+        atRule.append(padding('top', options.features.padding.top, media));
+      }
+
+      if (options.features.padding && options.features.padding.right) {
+        atRule.append(padding('right', options.features.padding.right, media));
+      }
+
+      if (options.features.padding && options.features.padding.bottom) {
+        atRule.append(padding('bottom', options.features.padding.bottom, media));
+      }
+
+      if (options.features.padding && options.features.padding.left) {
+        atRule.append(padding('left', options.features.padding.left, media));
+      }
+
+      if (options.features.textAlignment) {
+        atRule.append(textAlignment(media));
+      }
+
+      if (options.features.textSize) {
+        atRule.append(textSize(options.features.textSize, media));
+      }
+
+      if (options.features.zIndex) {
+        atRule.append(zIndex(options.features.zIndex, media));
+      }
+
+      if (css.type === 'root') {
+        css.append(atRule)
+      }
     });
-
-
-    if (options.globalStyles && options.features.display) {
-      display(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.float) {
-      float(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.fontSize) {
-      fontSize(root, {prefix: '', prefixSeparator: ''}, options.features.fontSize);
-    }
-
-    if (options.globalStyles && options.features.fontWeight) {
-      fontWeight(root, {prefix: '', prefixSeparator: ''}, options.features.fontWeight);
-    }
-
-    if (options.globalStyles && options.features.lineHeight) {
-      lineHeight(root, {prefix: '', prefixSeparator: ''}, options.features.lineHeight);
-    }
-
-    if (options.globalStyles && options.features.margin) {
-      margin(root, {prefix: '', prefixSeparator: ''}, options.features.margin);
-    }
-
-    if (options.globalStyles && options.features.objectFit) {
-      objectFit(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.opacity) {
-      opacity(root, {prefix: '', prefixSeparator: ''}, options.features.opacity.increment);
-    }
-
-    if (options.globalStyles && options.features.padding) {
-      padding(root, {prefix: '', prefixSeparator: ''}, options.features.padding);
-    }
-
-    if (options.globalStyles && options.features.position) {
-      position(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.textAlignment) {
-      textAlignment(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.textSize) {
-      textSize(root, {prefix: '', prefixSeparator: ''}, options.features.textSize);
-    }
-
-    if (options.globalStyles && options.features.visibility) {
-      visibility(root, {prefix: '', prefixSeparator: ''});
-    }
-
-    if (options.globalStyles && options.features.zIndex) {
-      zIndex(root, {prefix: '', prefixSeparator: ''}, options.features.zIndex.increment, options.features.zIndex.limit);
-    }
-
-    root.walkAtRules(node => {
-      options.mediaQueries.forEach(mediaQuery => {
-        if (node.type === 'atrule' && node.params === mediaQuery.params) {
-          if (options.features.display) {
-            display(node, mediaQuery);
-          }
-
-          if (options.features.float) {
-            float(node, mediaQuery);
-          }
-
-          if (options.features.fontSize) {
-            fontSize(node, mediaQuery, options.features.fontSize);
-          }
-
-          if (options.features.fontWeight) {
-            fontWeight(node, mediaQuery, options.features.fontWeight);
-          }
-
-          if (options.features.lineHeight) {
-            lineHeight(node, mediaQuery, options.features.lineHeight);
-          }
-
-          if (options.features.margin) {
-            margin(node, mediaQuery, options.features.margin);
-          }
-
-          if (options.globalStyles && options.features.objectFit) {
-            objectFit(node, mediaQuery);
-          }
-
-          if (options.features.opacity) {
-            opacity(node, mediaQuery, options.features.opacity.increment);
-          }
-
-          if (options.features.padding) {
-            padding(node, mediaQuery, options.features.padding);
-          }
-
-          if (options.features.position) {
-            position(node, mediaQuery);
-          }
-
-          if (options.features.textAlignment) {
-            textAlignment(node, mediaQuery);
-          }
-
-          if (options.features.textSize) {
-            textSize(node, mediaQuery, options.features.textSize);
-          }
-
-          if (options.features.visibility) {
-            visibility(node, mediaQuery);
-          }
-
-          if (options.features.zIndex) {
-            zIndex(node, mediaQuery, options.features.zIndex.increment, options.features.zIndex.limit);
-          }
-        }
-      });
-    })
   }
 });
