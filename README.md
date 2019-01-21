@@ -63,6 +63,14 @@ postcss([
 ])
 ```
 
+Add comment to your css file:
+```
+/* postcss-functional-css */
+```
+This will prevent from duplicate css in some bundlers like Parcel or Webpack.
+CSS will be ONLY appended if comment exists. 
+
+
 ## Warning
 Order of media queries is important. It is also important to use valid css values for properties like font-weight.
 
