@@ -1,20 +1,12 @@
 
 const postcss = require('postcss');
-const rules = require('./visibility-rules');
 
-module.exports = (media, global) => {
+module.exports = (rules) => {
   const newRules = [];
 
   rules.forEach(rule => {
-    let selector = '';
-    if (!global) {
-      selector = `.${media.prefix}${media.prefixSeparator}${rule.selector}`;
-    } else {
-      selector = `.${rule.selector}`;
-    }
-
     const newRule = postcss.rule({
-      selector: selector
+      selector: rule.selector
     });
 
     rule.decls.forEach(decl => {

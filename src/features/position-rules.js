@@ -1,6 +1,6 @@
 module.exports = [
   {
-    selector: 'absolute',
+    selector: '.absolute',
     decls: [
       {
         prop: 'position',
@@ -9,7 +9,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'fixed',
+    selector: '.fixed',
     decls: [
       {
         prop: 'position',
@@ -18,7 +18,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'relative',
+    selector: '.relative',
     decls: [
       {
         prop: 'position',
@@ -27,7 +27,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'static',
+    selector: '.static',
     decls: [
       {
         prop: 'position',
@@ -36,7 +36,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'sticky',
+    selector: '.sticky',
     decls: [
       {
         prop: 'position',

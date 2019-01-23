@@ -28,33 +28,89 @@ postcss([
     features: {
       display: true,
       float: true,
-      fontSize: [12, 14, 16, 18, 24, 32, 48],
-      fontWeight: [400, 500, 600, 700], 
-      lineHeight: [16, 18, 20, 22, 28, 36, 52],
-      margin: [4, 8, 16, 24],
+      fontSize: {
+        className: 'fs',
+        values: [12, 14, 16, 18, 24, 32, 48],
+        unit: 'px'
+      },
+      fontWeight: {
+        className: 'fw',
+        values: [400, 500, 600, 700]
+      },
+      lineHeight: {
+        className: 'ln',
+        values: [16, 18, 20, 22, 28, 36, 52],
+        unit: 'px'
+      },
+      margin: {
+        top: {
+          className: 'mt',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
+        },
+        right: {
+          className: 'mr',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
+        },
+        bottom: {
+          className: 'mb',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
+        },
+        left: {
+          className: 'ml',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
+        }
+      },
       objectFit: true,
       opacity: {
+        className: 'o',
         increment: 10
       },
-      padding: [4, 8, 16, 24],
-      position: true,
-      textSize: [
-        {
-          fontSize: 14,
-          lineHeight: 20
+      padding: {
+        top: {
+          className: 'pt',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
         },
-        {
-          fontSize: 16,
-          lineHeight: 20
+        right: {
+          className: 'pr',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
         },
-        {
-          fontSize: 24,
-          lineHeight: 28
+        bottom: {
+          className: 'pb',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
+        },
+        left: {
+          className: 'pl',
+          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+          unit: 'px'
         }
-      ],
+      },
+      position: true,
       textAlignment: true,
+      textSize: {
+        className: 'ts',
+        fontSizeUnit: 'px',
+        lineHeightUnit: 'px',
+        values: [
+          {
+            fontSize: 14,
+            lineHeight: 20
+          },
+          {
+            fontSize: 18,
+            lineHeight: 24
+          }
+        ]
+      },
       visibility: true,
       zIndex: {
+        className: 'z',
         increment: 1,
         limit: 10
       }
@@ -84,40 +140,67 @@ Order of media queries is important. It is also important to use valid css value
 }
 ```
 ___
-`features.dispaly` - `true`|`false` (default: `true`)
+`features.dispaly` - `true`|`false`
 ___  
-`features.float` - `true`|`false` (default: `true`)
+`features.float` - `true`|`false`
 ___  
-`features.fontSize` - `Array`|`false` (default: `[12, 14, 16, 18, 24, 32, 48]`)
+`features.fontSize` - `Object`|`false`
 ```
 features: {
-  fontSize: [12, 14, 16, 18, 24, 32, 48]
-}
-```
-___  
-`features.fontWeight` - `Array`|`false` (default: `[400, 500, 600, 700]`)
-```
-features: {
-  fontWeignt: [400, 500, 600]
-}
-```
-___ 
-`features.margin` - `Array`|`false`
-```
-features: {
-  margin: {
-    top: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    right: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    bottom: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    left: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120]
+  fontSize: {
+    className: 'fs',
+    values: [12, 14, 16, 18, 24, 32, 48],
+    unit: 'px'
   }
 }
 ```
 ___  
-`features.lineHeight` - `Array`|`false` (default: `[16, 18, 20, 22, 28, 36, 52]`)
+`features.fontWeight` - `Object`|`false`
 ```
 features: {
-  lineHeight: [16, 18, 20, 22, 28, 36, 52]
+  fontWeignt: {
+    className: 'fw',
+    values: [400, 500, 600, 700]
+  }
+}
+```
+___  
+`features.lineHeight` - `Object`|`false`
+```
+features: {
+  lineHeight: {
+    className: 'ln',
+    values: [16, 18, 20, 22, 28, 36, 52],
+    unit: 'px'
+  }
+}
+```
+___ 
+`features.margin` - `Array`|`false` or `false` for each direction
+```
+features: {
+  margin: {
+    top: {
+      className: 'm-t',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    right: {
+      className: 'm-r',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    bottom: {
+      className: 'm-b',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    left: {
+      className: 'm-l',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    }
+  }
 }
 ```
 ___ 
@@ -127,41 +210,61 @@ ___
 ```
 features: {
   opacity: {
+    className: 'o',
     increment: 10
   }
 }
 ```
 ___
-`features.padding` - `Array`|`false`
+`features.padding` - `Object`|`false` or `false` for each direction
 ```
 features: {
   padding: {
-    top: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    right: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    bottom: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-    left: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120]
+    top: {
+      className: 'p-t',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    right: {
+      className: 'p-r',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    bottom: {
+      className: 'p-b',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    left: {
+      className: 'p-l',
+      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    }
   }
 }
 ``` 
 ___
 `features.textAlignment` - `true`|`false` (default: `true`)
 ___
-`features.textSize` - `Array`|`false`
+`features.textSize` - `Object`|`false`
 ```
-features.textSize: [
-  {
-    fontSize: 14,
-    lineHeight: 20
-  },
-  {
-    fontSize: 16,
-    lineHeight: 20
-  },
-  {
-    fontSize: 24,
-    lineHeight: 28
+features: {
+  textSize: {
+    className: 'ts',
+    fontSizeUnit: 'px',
+    lineHeightUnit: 'px',
+    values: [
+      {
+        fontSize: 14,
+        lineHeight: 20
+      },
+      {
+        fontSize: 18,
+        lineHeight: 24
+      }
+    ]
   }
-]
+}
 ```
 ___  
 `features.visibility` - `true`|`false` (default: `true`)
@@ -170,6 +273,7 @@ ___
 ```
 features: {
   zIndex: {
+    className: 'z',
     increment: 1,
     limit: 10
   }

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    selector: 'object-contain',
+    selector: '.object-contain',
     decls: [
       {
         prop: 'object-fit',
@@ -9,7 +9,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'object-cover',
+    selector: '.object-cover',
     decls: [
       {
         prop: 'object-fit',
@@ -18,7 +18,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'object-fill',
+    selector: '.object-fill',
     decls: [
       {
         prop: 'object-fit',
@@ -27,7 +27,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'object-none',
+    selector: '.object-none',
     decls: [
       {
         prop: 'object-fit',
@@ -36,7 +36,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'object-scale-down',
+    selector: '.object-scale-down',
     decls: [
       {
         prop: 'object-fit',

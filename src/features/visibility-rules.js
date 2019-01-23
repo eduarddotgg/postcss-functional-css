@@ -1,6 +1,6 @@
 module.exports = [
   {
-    selector: 'visible',
+    selector: '.visible',
     decls: [
       {
         prop: 'visibility',
@@ -9,7 +9,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'invisible',
+    selector: '.invisible',
     decls: [
       {
         prop: 'visibility',
