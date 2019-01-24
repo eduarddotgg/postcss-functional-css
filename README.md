@@ -20,7 +20,7 @@ postcss([
     mediaQueries: [
       {
         prefix: 'sm',
-        prefixSeparator: '\\:',
+        prefixSeparator: '-',
         params: '(min-width: 640px)'
       }
     ],
