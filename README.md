@@ -37,6 +37,11 @@ postcss([
         className: 'fw',
         values: [400, 500, 600, 700]
       },
+      height: {
+        className: 'h',
+        values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
       lineHeight: {
         className: 'ln',
         values: [16, 18, 20, 22, 28, 36, 52],
@@ -108,6 +113,7 @@ postcss([
           }
         ]
       },
+      textTransform: true,
       visibility: true,
       zIndex: {
         className: 'z',

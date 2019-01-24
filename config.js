@@ -18,6 +18,11 @@ module.exports = {
       values: [16, 18, 20, 22, 28, 36, 52],
       unit: 'px'
     },
+    height: {
+      className: 'h',
+      values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
     margin: {
       top: {
         className: 'mt',
@@ -84,6 +89,7 @@ module.exports = {
         }
       ]
     },
+    textTransform: true,
     visibility: true,
     zIndex: {
       className: 'zi',

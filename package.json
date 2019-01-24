@@ -1,6 +1,6 @@
 {
   "name": "postcss-functional-css",
-  "version": "0.50.0",
+  "version": "0.52.0",
   "description": "PostCSS Functional CSS will help you to generate functional css.",
   "keywords": [
     "postcss",
