@@ -1,9 +1,9 @@
 
 const generateNodes = require('../utils/generate-nodes');
-const values = require('./float-rules');
+const values = require('./align-self-rules');
 
 module.exports = (node, config, prefix) => {
-  if (config.features.float) {
+  if (config.features.alignSelf) {
     const rules = [];
     const classNamePrefix = prefix || '';
 

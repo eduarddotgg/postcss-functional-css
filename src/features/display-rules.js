@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: '.block',
+    selector: 'block',
     decls: [
       {
         prop: 'display',
@@ -10,16 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.flex',
-    decls: [
-      {
-        prop: 'display',
-        value: 'flex'
-      }
-    ]
-  },
-  {
-    selector: '.grid',
+    selector: 'grid',
     decls: [
       {
         prop: 'display',
@@ -28,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.hidden',
+    selector: 'hidden',
     decls: [
       {
         prop: 'display',
@@ -37,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.inline',
+    selector: 'inline',
     decls: [
       {
         prop: 'display',
@@ -46,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.inline-block',
+    selector: 'inline-block',
     decls: [
       {
         prop: 'display',
@@ -55,7 +46,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.table',
+    selector: 'table',
     decls: [
       {
         prop: 'display',
@@ -64,7 +55,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.table-row',
+    selector: 'table-row',
     decls: [
       {
         prop: 'display',
@@ -73,7 +64,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.table-cell',
+    selector: 'table-cell',
     decls: [
       {
         prop: 'display',

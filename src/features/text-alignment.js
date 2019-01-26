@@ -1,9 +1,21 @@
 
 const generateNodes = require('../utils/generate-nodes');
-const rules = require('./text-alignment-rules');
+const values = require('./text-alignment-rules');
 
-module.exports = (node, config) => {
+module.exports = (node, config, prefix) => {
   if (config.features.textAlignment) {
+    const rules = [];
+    const classNamePrefix = prefix || '';
+
+    values.forEach(item => {
+      const rule = {
+        selector: `.${classNamePrefix}${item.selector}`,
+        decls: item.decls
+      };
+
+      rules.push(rule);
+    });
+
     const nodes = generateNodes(rules);
     node.append(nodes);
   }

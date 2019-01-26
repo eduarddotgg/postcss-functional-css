@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: '.float-left',
+    selector: 'float-left',
     decls: [
       {
         prop: 'float',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.float-none',
+    selector: 'float-none',
     decls: [
       {
         prop: 'float',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.float-right',
+    selector: 'float-right',
     decls: [
       {
         prop: 'float',

@@ -26,7 +26,13 @@ postcss([
     ],
     globalStyles: true,
     features: {
+      alignContent: true,
+      alignItems: true,
+      alignSelf: true,
       display: true,
+      flex: true,
+      flexDirection: true,
+      flexWrap: true,
       float: true,
       fontSize: {
         className: 'fs',
@@ -37,16 +43,17 @@ postcss([
         className: 'fw',
         values: [400, 500, 600, 700]
       },
-      height: {
-        className: 'h',
-        values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-        unit: 'px'
-      },
       lineHeight: {
         className: 'ln',
         values: [16, 18, 20, 22, 28, 36, 52],
         unit: 'px'
       },
+      height: {
+        className: 'h',
+        values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      justifyContent: true,
       margin: {
         top: {
           className: 'mt',
@@ -68,6 +75,16 @@ postcss([
           values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
           unit: 'px'
         }
+      },
+      minHeight: {
+        className: 'minh',
+        values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      maxHeight: {
+        className: 'maxh',
+        values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
       },
       objectFit: true,
       opacity: {
@@ -99,7 +116,7 @@ postcss([
       position: true,
       textAlignment: true,
       textSize: {
-        className: 'ts',
+        className: 'fs',
         fontSizeUnit: 'px',
         lineHeightUnit: 'px',
         values: [

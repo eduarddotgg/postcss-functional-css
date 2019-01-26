@@ -15,7 +15,7 @@ module.exports = (node, config, prefix) => {
         decls: [
           {
             prop: 'opacity',
-            value: `${inc}`
+            value: `${inc / 100}`
           }
         ]
       };

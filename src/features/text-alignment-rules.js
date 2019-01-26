@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: '.text-align-center',
+    selector: 'text-align-center',
     decls: [
       {
         prop: 'text-align',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.text-align-left',
+    selector: 'text-align-left',
     decls: [
       {
         prop: 'text-align',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: '.text-align-right',
+    selector: 'text-align-right',
     decls: [
       {
         prop: 'text-align',
