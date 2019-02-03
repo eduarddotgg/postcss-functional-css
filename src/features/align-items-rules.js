@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'items-stretch',
+    selector: 'stretch',
     decls: [
       {
         prop: 'align-items',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'items-start',
+    selector: 'start',
     decls: [
       {
         prop: 'align-items',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'items-center',
+    selector: 'center',
     decls: [
       {
         prop: 'align-items',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'items-end',
+    selector: 'end',
     decls: [
       {
         prop: 'align-items',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'items-baseline',
+    selector: 'baseline',
     decls: [
       {
         prop: 'align-items',

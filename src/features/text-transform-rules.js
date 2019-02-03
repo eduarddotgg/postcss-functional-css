@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'text-transform-none',
+    selector: 'none',
     decls: [
       {
         prop: 'text-transform',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'text-transform-capitalize',
+    selector: 'capitalize',
     decls: [
       {
         prop: 'text-transform',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'text-transform-uppercase',
+    selector: 'uppercase',
     decls: [
       {
         prop: 'text-transform',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'text-transform-lowercase',
+    selector: 'lowercase',
     decls: [
       {
         prop: 'text-transform',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'text-transform-initial',
+    selector: 'initial',
     decls: [
       {
         prop: 'text-transform',
@@ -46,7 +46,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'text-transform-inherit',
+    selector: 'inherit',
     decls: [
       {
         prop: 'text-transform',

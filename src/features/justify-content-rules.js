@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'justify-around',
+    selector: 'around',
     decls: [
       {
         prop: 'justify-content',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'justify-start',
+    selector: 'start',
     decls: [
       {
         prop: 'justify-content',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'justify-center',
+    selector: 'center',
     decls: [
       {
         prop: 'justify-content',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'justify-end',
+    selector: 'end',
     decls: [
       {
         prop: 'justify-content',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'justify-between',
+    selector: 'between',
     decls: [
       {
         prop: 'justify-content',

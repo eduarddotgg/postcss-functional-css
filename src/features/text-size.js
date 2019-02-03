@@ -1,4 +1,5 @@
 
+const camelCase = require('lodash.camelcase');
 const generateNodes = require('../utils/generate-nodes');
 
 module.exports = (node, config, prefix) => {
@@ -11,8 +12,16 @@ module.exports = (node, config, prefix) => {
     const lineHeightUnit = config.features.textSize.lineHeightUnit;
 
     values.forEach(item => {
+      let selector;
+
+      if (config.cssModules) {
+        selector = camelCase(`${classNamePrefix}${className}-${item.fontSize}`);
+      } else {
+        selector = `${classNamePrefix}${className}-${item.fontSize}`;
+      }
+
       const rule = {
-        selector: `.${classNamePrefix}${className}-${item.fontSize}`,
+        selector: `.${selector}`,
         decls: [
           {
             prop: 'font-size',

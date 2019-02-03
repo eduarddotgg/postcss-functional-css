@@ -1,4 +1,5 @@
 
+const camelCase = require('lodash.camelcase');
 const generateNodes = require('../utils/generate-nodes');
 
 module.exports = (node, config, prefix) => {
@@ -9,8 +10,16 @@ module.exports = (node, config, prefix) => {
     const className = config.features.fontWeight.className || 'font-weight';
 
     values.forEach(item => {
+      let selector;
+
+      if (config.cssModules) {
+        selector = camelCase(`${classNamePrefix}${className}-${item}`);
+      } else {
+        selector = `${classNamePrefix}${className}-${item}`;
+      }
+
       const rule = {
-        selector: `.${classNamePrefix}${className}-${item}`,
+        selector: `.${selector}`,
         decls: [
           {
             prop: 'font-weight',

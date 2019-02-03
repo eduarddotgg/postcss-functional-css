@@ -15,485 +15,252 @@ npm i postcss postcss-functional-css
 ```
 
 ```js
+
+const config = require('postcss-functional-css-config');
+
 postcss([
-  require('postcss-functional-css')({
-    mediaQueries: [
-      {
-        prefix: 'sm',
-        prefixSeparator: '-',
-        params: '(min-width: 640px)'
-      }
-    ],
-    globalStyles: true,
-    features: {
-      alignContent: true,
-      alignItems: true,
-      alignSelf: true,
-      display: true,
-      flex: true,
-      flexDirection: true,
-      flexWrap: true,
-      float: true,
-      fontSize: {
-        className: 'fs',
-        values: [12, 14, 16, 18, 24, 32, 48],
-        unit: 'px'
-      },
-      fontWeight: {
-        className: 'fw',
-        values: [400, 500, 600, 700]
-      },
-      lineHeight: {
-        className: 'ln',
-        values: [16, 18, 20, 22, 28, 36, 52],
-        unit: 'px'
-      },
-      height: {
-        className: 'h',
-        values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-        unit: 'px'
-      },
-      justifyContent: true,
-      margin: {
-        top: {
-          className: 'mt',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        right: {
-          className: 'mr',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        bottom: {
-          className: 'mb',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        left: {
-          className: 'ml',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        }
-      },
-      minHeight: {
-        className: 'minh',
-        values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-        unit: 'px'
-      },
-      maxHeight: {
-        className: 'maxh',
-        values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-        unit: 'px'
-      },
-      objectFit: true,
-      opacity: {
-        className: 'o',
-        increment: 10
-      },
-      padding: {
-        top: {
-          className: 'pt',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        right: {
-          className: 'pr',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        bottom: {
-          className: 'pb',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        },
-        left: {
-          className: 'pl',
-          values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-          unit: 'px'
-        }
-      },
-      position: true,
-      textAlignment: true,
-      textSize: {
-        className: 'fs',
-        fontSizeUnit: 'px',
-        lineHeightUnit: 'px',
-        values: [
-          {
-            fontSize: 14,
-            lineHeight: 20
-          },
-          {
-            fontSize: 18,
-            lineHeight: 24
-          }
-        ]
-      },
-      textTransform: true,
-      visibility: true,
-      zIndex: {
-        className: 'z',
-        increment: 1,
-        limit: 10
-      }
-    }
-  })
+  require('postcss-functional-css')(config)
 ])
 ```
 
+Config Example:
+```$js
+module.exports = {
+  globalStyles: true,
+  cssModules: false,
+  mediaQueries: [
+    {
+      prefix: 'sm',
+      prefixSeparator: '-',
+      params: '(min-width: 480px)'
+    },
+    {
+      prefix: 'md',
+      prefixSeparator: '-',
+      params: '(min-width: 640px)'
+    },
+    {
+      prefix: 'lg',
+      prefixSeparator: '-',
+      params: '(min-width: 960px)'
+    },
+    {
+      prefix: 'xl',
+      prefixSeparator: '-',
+      params: '(min-width: 1280px)'
+    }
+  ],
+  features: {
+    alignContent: {
+      className: 'content'
+    },
+    alignItems: {
+      className: 'items'
+    },
+    alignSelf: {
+      className: 'self'
+    },
+    display: {
+      className: 'd'
+    },
+    flex: {
+      className: 'flex'
+    },
+    flexDirection: {
+      className: 'direction'
+    },
+    flexWrap: {
+      className: 'flex'
+    },
+    float: {
+      className: 'float'
+    },
+    fontSize: {
+      className: 'fs',
+      values: [12, 14, 16, 18, 24, 32, 48],
+      unit: 'px'
+    },
+    fontWeight: {
+      className: 'fw',
+      values: [400, 500, 600, 700]
+    },
+    lineHeight: {
+      className: 'ln',
+      values: [16, 18, 20, 22, 28, 36, 52],
+      unit: 'px'
+    },
+    height: {
+      className: 'h',
+      values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    justifyContent: {
+      className: 'justify'
+    },
+    margin: {
+      top: {
+        className: 'mt',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      right: {
+        className: 'mr',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      bottom: {
+        className: 'mb',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      left: {
+        className: 'ml',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      }
+    },
+    minHeight: {
+      className: 'minh',
+      values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    maxHeight: {
+      className: 'maxh',
+      values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+      unit: 'px'
+    },
+    objectFit: {
+      className: 'object-fit'
+    },
+    opacity: {
+      className: 'o',
+      increment: 10
+    },
+    padding: {
+      top: {
+        className: 'pt',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      right: {
+        className: 'pr',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      bottom: {
+        className: 'pb',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      left: {
+        className: 'pl',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      }
+    },
+    position: {
+      className: 'position'
+    },
+    textAlignment: {
+      className: 'text-alignment'
+    },
+    textSize: {
+      className: 'fs',
+      fontSizeUnit: 'px',
+      lineHeightUnit: 'px',
+      values: [
+        {
+          fontSize: 14,
+          lineHeight: 20
+        },
+        {
+          fontSize: 18,
+          lineHeight: 24
+        }
+      ]
+    },
+    textTransform: {
+      className: 'text-transform'
+    },
+    visibility: true,
+    zIndex: {
+      className: 'z',
+      increment: 1,
+      limit: 10
+    }
+  }
+};
+
+```
 Add comment to your css file:
 ```
 /* postcss-functional-css */
 ```
-This will prevent from duplicate css in some bundlers like Parcel or Webpack.
-CSS will be ONLY appended if comment exists. 
 
-
-## Warning
-Order of media queries is important. It is also important to use valid css values for properties like font-weight.
-
-## Config 
-`mediaQueries` - Array
-```js
-{
-  prefix: 'sm', // css class prefix
-  prefixSeparator: '\\:', // css class separator
-  params: '(min-width: 640px)' // media query param (can be any css valid media query param)
-}
+#### Split CSS
+It's possible to split css by adding comments for a specific feature:
 ```
-___
-`features.dispaly` - `true`|`false`
-___  
-`features.float` - `true`|`false`
-___  
-`features.fontSize` - `Object`|`false`
-```
-features: {
-  fontSize: {
-    className: 'fs',
-    values: [12, 14, 16, 18, 24, 32, 48],
-    unit: 'px'
-  }
-}
-```
-___  
-`features.fontWeight` - `Object`|`false`
-```
-features: {
-  fontWeignt: {
-    className: 'fw',
-    values: [400, 500, 600, 700]
-  }
-}
-```
-___  
-`features.lineHeight` - `Object`|`false`
-```
-features: {
-  lineHeight: {
-    className: 'ln',
-    values: [16, 18, 20, 22, 28, 36, 52],
-    unit: 'px'
-  }
-}
-```
-___ 
-`features.margin` - `Array`|`false` or `false` for each direction
-```
-features: {
-  margin: {
-    top: {
-      className: 'm-t',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    right: {
-      className: 'm-r',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    bottom: {
-      className: 'm-b',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    left: {
-      className: 'm-l',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    }
-  }
-}
-```
-___ 
-`features.objectFit` - `Object`|`false` (default: `true`)
-___ 
-`features.opacity` - `Object`|`false` (default: `increment: 10`)
-```
-features: {
-  opacity: {
-    className: 'o',
-    increment: 10
-  }
-}
-```
-___
-`features.padding` - `Object`|`false` or `false` for each direction
-```
-features: {
-  padding: {
-    top: {
-      className: 'p-t',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    right: {
-      className: 'p-r',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    bottom: {
-      className: 'p-b',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    },
-    left: {
-      className: 'p-l',
-      values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
-      unit: 'px'
-    }
-  }
-}
-``` 
-___
-`features.textAlignment` - `true`|`false` (default: `true`)
-___
-`features.textSize` - `Object`|`false`
-```
-features: {
-  textSize: {
-    className: 'ts',
-    fontSizeUnit: 'px',
-    lineHeightUnit: 'px',
-    values: [
-      {
-        fontSize: 14,
-        lineHeight: 20
-      },
-      {
-        fontSize: 18,
-        lineHeight: 24
-      }
-    ]
-  }
-}
-```
-___  
-`features.visibility` - `true`|`false` (default: `true`)
-___  
-`features.zIndex` - `Object`|`false`
-```
-features: {
-  zIndex: {
-    className: 'z',
-    increment: 1,
-    limit: 10
-  }
-}
+/* postcss-functional-css-align-content */
+/* postcss-functional-css-align-items */
+/* postcss-functional-css-align-self */
+/* postcss-functional-css-display */
+/* postcss-functional-css-flex */
+/* postcss-functional-css-flex-direction */
+/* postcss-functional-css-flex-wrap */
+/* postcss-functional-css-float */
+/* postcss-functional-css-font-size */
+/* postcss-functional-css-font-weight */
+/* postcss-functional-css-line-height */
+/* postcss-functional-css-height */
+/* postcss-functional-css-justify-content */
+/* postcss-functional-css-max-height */
+/* postcss-functional-css-min-height */
+/* postcss-functional-css-object-fit */
+/* postcss-functional-css-opacity */
+/* postcss-functional-css-padding */
+/* postcss-functional-css-position */
+/* postcss-functional-css-text-alignment */
+/* postcss-functional-css-text-size */
+/* postcss-functional-css-text-transform */
+/* postcss-functional-css-visibility */
+/* postcss-functional-css-z-index */
 ```  
 
+## Config
+`globalStyle` - enable/disable global styles.
 
-## Features
+`cssModules` - generates class names compatible with css modules
 
-### Display
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .block                            | display: block;                                    |
-| .flex                             | display: flex;                                     |
-| .grid                             | display: grid;                                     |
-| .hidden                           | display: hidden;                                   |
-| .inline                           | display: inline;                                   |
-| .inline-block                     | display: inline-block;                             |
-| .table                            | display: table;                                    |
-| .table-row                        | display: table-row;                                |
-| .table-cell                       | display: table-cell;                               |
+`mediaQueries` - a list of media queries.
 
-##### Responsive
-```
-  .${prefix}${prefixSeparator}block
-  
-  <div class="sm:hidden lg:block"></div>
-```
+`mediaQuery.prefix` - current media query's prefix that will be added to the class name.  
+`mediaQuery.prefixSeparator` - separator between media query prefix and feature class name.   
+`mediaQuery.params` - media query params (valid css media query value).  
 
+`features[any]` - (Boolean | Object).  
+`features[any].className` - (String) specify custom base class name.   
+If not defined default base class name will be generated - `.display-none { display: none; }`.
+If empty, base class name won't be generated for example `features.display.className = ''` - `.none { display: none; }`. 
 
-### Floats
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .float-left                       | float: left;                                       |
-| .float-none                       | float: none;                                       |
-| .float-right                      | float: right;                                      |
+`features[margin|padding][direction].className` - (String) specify custom base class name.  
+`features[margin|padding][direction].values` - (Array) list of desired values.  
+`features[margin|padding][direction].unit` - (String) unit. 
 
-##### Responsive
-```
-  .${prefix}${prefixSeparator}float-left
-  
-  <div class="sm:float-none lg:float-left"></div>
-```
+`features[fontSize|lineHeight|height|maxHeight|minHeight].className` - (String) specify custom base class name.  
+`features[fontSize|lineHeight|height|maxHeight|minHeight].values` - (Array) list of desired values.  
+`features[fontSize|lineHeight|height|maxHeight|minHeight].unit` - (String) unit.  
 
-#### Font Size
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .font-size-${fontSize}            | font-size: ${fontSize};                            |
+`features[fontWeight].className` - (String) specify custom base class name.  
+`features[fontWeight].values` - (Array) list of desired values.  
 
-##### Responsive
-```
-  .${prefix}${prefixSeparator}font-size-${fontSize}
-  
-  <div class="sm:font-size-14 lg:font-size-24"></div>
-```
+`features[textSize].className` - (String) specify custom base class name.  
+`features[textSize].fontSizeUnit` - (String) font size custom unit.  
+`features[textSize].lineHeightUnit` - (String) font size custom unit.  
+`features[textSize].values` - (Array) array of objects.  
 
-#### Font Weight
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .font-weight-${fontWeight}       | font-weight: ${fontWeight};                         |
+`features[opacity].className` - (String) specify custom base class name.  
+`features[opacity].increment` - (Number) increment number.  
 
-##### Responsive
-```
-  .${prefix}${prefixSeparator}font-weight-${fontWeifght}
-  
-  <div class="sm:font-weight-400 lg:font-weight-700"></div>
-```
-
-#### Line Height
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .line-height-${lineHeight}        | line-height: ${lineHeight};                        |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}line-height-${lineHeight}
-  
-  <div class="sm:line-height-18 lg:line-height-28"></div>
-```
-
-#### Margin
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .margin-top-${increment}          | margin-top: ${increment}px;                        |
-| .margin-right-${increment}        | margin-right: ${increment}px;                      |
-| .margin-bottom-${increment}       | margin-bottom: ${increment}px;                     |
-| .margin-left-${increment}         | margin-left: ${increment}px;                       |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}margin-bottom-${increment}
-  
-  <div class="sm:margin-bottom-12 lg:margin-bottom-24"></div>
-```
-
-#### Opacity
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .opacity-${increment}             | opacity: ${increment};                             |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}opacity-${increment}
-  
-  <div class="sm:opacity-40 lg:opacity-80"></div>
-```
-
-#### Padding
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .padding-top-${increment}          | padding-top: ${increment}px;                      |
-| .padding-right-${increment}        | padding-right: ${increment}px;                    |
-| .padding-bottom-${increment}       | padding-bottom: ${increment}px;                   |
-| .padding-left-${increment}         | padding-left: ${increment}px;                     |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}padding-bottom-${increment}
-  
-  <div class="sm:padding-bottom-12 lg:padding-bottom-24"></div>
-```
-
-#### Position
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .absolute                         | position: absolute;                                |
-| .fixed                            | position: fixed;                                   |
-| .relative                         | position: relative;                                |
-| .static                           | position: static;                                  |
-| .sticky                           | position: sticky;                                  |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}relative
-  
-  <div class="sm:relative lg:fixed"></div>
-```
-
-#### Text Alignment
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .text-align-center                | text-align: center;                                |
-| .text-align-justify               | text-align: justify;                               |
-| .text-align-left                  | text-align: left;                                  |
-| .text-align-right                 | text-align: right;                                 |
-
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}text-align-left
-  
-  <div class="sm:text-align-left lg:text-align-center"></div>
-```
-
-#### Text Size
-| Class                                 | Properties                                         |
-|:--------------------------------------|:---------------------------------------------------|
-| .text-size-${fontSize}-${line-height} | font-size: ${fontSize}; line-height: ${lineHeight} |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}text-size-${fontSize}-${line-height}
-  
-  <div class="sm:font-size-14-18 lg:font-size-24-28"></div>
-```
-
-#### Visibility
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .visible                          | visibility: visible;                               |
-| .invisible                        | visibility: hidden;                                |
-
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}visible
-  
-  <div class="sm:invisible lg:visible"></div>
-```
-
-#### Z-index
-| Class                             | Properties                                         |
-|:----------------------------------|:---------------------------------------------------|
-| .z-index-${increment}             | z-index: ${increment};                             |
-
-##### Responsive
-```
-  .${prefix}${prefixSeparator}z-index-${increment}
-  
-  <div class="sm:z-index-1 lg:opacity-40"></div>
-```
-
-## TODO
-- better class name management (shorter, custom, etc)
-- tests
-- automatically generate margins
-- automatically generate padding
-- grid?
-- more features
-- more units support
+`features[zIndex].className` - (String) specify custom base class name.  
+`features[zIndex].increment` - (Number) increment number.  
+`features[zIndex].limit` - (Number) z-index max value.  

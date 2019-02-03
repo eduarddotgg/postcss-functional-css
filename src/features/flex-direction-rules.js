@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'flex-row',
+    selector: 'row',
     decls: [
       {
         prop: 'flex-direction',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'flex-row-reverse',
+    selector: 'row-reverse',
     decls: [
       {
         prop: 'flex-direction',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'flex-col',
+    selector: 'col',
     decls: [
       {
         prop: 'flex-direction',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'flex-col-reverse',
+    selector: 'col-reverse',
     decls: [
       {
         prop: 'flex-direction',

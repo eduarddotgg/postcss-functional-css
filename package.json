@@ -1,6 +1,6 @@
 {
   "name": "postcss-functional-css",
-  "version": "0.61.0",
+  "version": "0.100.0",
   "description": "PostCSS Functional CSS will help you to generate functional css.",
   "keywords": [
     "postcss",
@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/iamfrntdv/postcss-functional-css",
   "dependencies": {
+    "lodash.camelcase": "^4.3.0",
     "postcss": "^7.0.13"
   },
   "devDependencies": {

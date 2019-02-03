@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'flex-wrap',
+    selector: 'wrap',
     decls: [
       {
         prop: 'flex-wrap',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'flex-no-wrap',
+    selector: 'no-wrap',
     decls: [
       {
         prop: 'flex-wrap',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'flex-wrap-reverse',
+    selector: 'wrap-reverse',
     decls: [
       {
         prop: 'flex-wrap',

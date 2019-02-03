@@ -1,15 +1,58 @@
 module.exports = {
-  mediaQueries: [],
+  mediaQueries: [
+    {
+      prefix: 'sm',
+      prefixSeparator: '-',
+      params: '(min-width: 480px)'
+    },
+    {
+      prefix: 'md',
+      prefixSeparator: '-',
+      params: '(min-width: 640px)'
+    },
+    {
+      prefix: 'lg',
+      prefixSeparator: '-',
+      params: '(min-width: 960px)'
+    },
+    {
+      prefix: 'xl',
+      prefixSeparator: '-',
+      params: '(min-width: 1280px)'
+    },
+    {
+      prefix: 'xxl',
+      prefixSeparator: '-',
+      params: '(min-width: 1440px)'
+    }
+  ],
   globalStyles: true,
+  cssModules: false,
   features: {
-    alignContent: true,
-    alignItems: true,
-    alignSelf: true,
-    display: true,
-    flex: true,
-    flexDirection: true,
-    flexWrap: true,
-    float: true,
+    alignContent: {
+      className: 'content'
+    },
+    alignItems: {
+      className: 'items'
+    },
+    alignSelf: {
+      className: 'self'
+    },
+    display: {
+      className: 'd'
+    },
+    flex: {
+      className: 'flex'
+    },
+    flexDirection: {
+      className: 'direction'
+    },
+    flexWrap: {
+      className: 'flex'
+    },
+    float: {
+      className: 'float'
+    },
     fontSize: {
       className: 'fs',
       values: [12, 14, 16, 18, 24, 32, 48],
@@ -29,7 +72,9 @@ module.exports = {
       values: ['auto', 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
       unit: 'px'
     },
-    justifyContent: true,
+    justifyContent: {
+      className: 'justify'
+    },
     margin: {
       top: {
         className: 'mt',
@@ -62,7 +107,9 @@ module.exports = {
       values: [0, 4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
       unit: 'px'
     },
-    objectFit: true,
+    objectFit: {
+      className: 'object-fit'
+    },
     opacity: {
       className: 'o',
       increment: 10
@@ -89,8 +136,12 @@ module.exports = {
         unit: 'px'
       }
     },
-    position: true,
-    textAlignment: true,
+    position: {
+      className: 'position'
+    },
+    textAlignment: {
+      className: 'text-alignment'
+    },
     textSize: {
       className: 'fs',
       fontSizeUnit: 'px',
@@ -106,7 +157,9 @@ module.exports = {
         }
       ]
     },
-    textTransform: true,
+    textTransform: {
+      className: 'text-transform'
+    },
     visibility: true,
     zIndex: {
       className: 'z',

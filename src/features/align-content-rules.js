@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'content-around',
+    selector: 'around',
     decls: [
       {
         prop: 'align-content',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'content-start',
+    selector: 'start',
     decls: [
       {
         prop: 'align-content',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'content-center',
+    selector: 'center',
     decls: [
       {
         prop: 'align-content',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'content-end',
+    selector: 'end',
     decls: [
       {
         prop: 'align-content',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'content-between',
+    selector: 'between',
     decls: [
       {
         prop: 'align-content',

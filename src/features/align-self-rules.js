@@ -1,7 +1,7 @@
 
 module.exports = [
   {
-    selector: 'self-stretch',
+    selector: 'stretch',
     decls: [
       {
         prop: 'align-self',
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'self-start',
+    selector: 'start',
     decls: [
       {
         prop: 'align-self',
@@ -19,7 +19,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'self-center',
+    selector: 'center',
     decls: [
       {
         prop: 'align-self',
@@ -28,7 +28,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'self-end',
+    selector: 'end',
     decls: [
       {
         prop: 'align-self',
@@ -37,7 +37,7 @@ module.exports = [
     ]
   },
   {
-    selector: 'self-auto',
+    selector: 'auto',
     decls: [
       {
         prop: 'align-self',
