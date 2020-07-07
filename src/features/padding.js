@@ -27,13 +27,38 @@ module.exports = (node, config, direction, prefix) => {
 
       const rule = {
         selector: `.${selector}`,
-        decls: [
-          {
-            prop: `padding-${direction}`,
-            value: `${item}${unit}`
-          }
-        ]
+        decls: []
       };
+
+      if (direction === 'x') {
+        rule.decls.push({
+          prop: `padding-left`,
+          value: `${item}${unit}`
+        })
+        rule.decls.push({
+          prop: `padding-right`,
+          value: `${item}${unit}`
+        })
+      } else if (direction === 'y') {
+        rule.decls.push({
+          prop: `padding-bottom`,
+          value: `${item}${unit}`
+        })
+        rule.decls.push({
+          prop: `padding-top`,
+          value: `${item}${unit}`
+        })
+      } else if (direction === 'all') {
+        rule.decls.push({
+          prop: `padding`,
+          value: `${item}${unit}`
+        })
+      } else {
+        rule.decls.push({
+          prop: `padding-${direction}`,
+          value: `${item}${unit}`
+        })
+      }
 
       rules.push(rule);
     });

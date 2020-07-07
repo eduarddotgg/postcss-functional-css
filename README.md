@@ -5,7 +5,7 @@ PostCSS Functional CSS is PostCSS Plugin that will help to generate functional c
 ## Why
 Why not? Just for fun! Because it's possible with PostCSS. Because it's hype. Just because.
 
-Main reason why I decided to create this plugin is because with it's help I would like to create functional css faster. 
+Main reason why I decided to create this plugin is because with it's help I would like to create functional css faster.
 At the same time I would like to have ability to adjust css anytime with ease and individually for each project.
 
 
@@ -98,6 +98,21 @@ module.exports = {
       className: 'justify'
     },
     margin: {
+      all: {
+        className: 'm',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      x: {
+        className: 'mx',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      y: {
+        className: 'my',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
       top: {
         className: 'mt',
         values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
@@ -137,6 +152,21 @@ module.exports = {
       increment: 10
     },
     padding: {
+      all: {
+        className: 'p',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      x: {
+        className: 'px',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      y: {
+        className: 'py',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
       top: {
         className: 'pt',
         values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
@@ -224,7 +254,7 @@ It's possible to split css by adding comments for a specific feature:
 /* postcss-functional-css-text-transform */
 /* postcss-functional-css-visibility */
 /* postcss-functional-css-z-index */
-```  
+```
 
 ## Config
 `globalStyle` - enable/disable global styles.
@@ -233,34 +263,34 @@ It's possible to split css by adding comments for a specific feature:
 
 `mediaQueries` - a list of media queries.
 
-`mediaQuery.prefix` - current media query's prefix that will be added to the class name.  
-`mediaQuery.prefixSeparator` - separator between media query prefix and feature class name.   
-`mediaQuery.params` - media query params (valid css media query value).  
+`mediaQuery.prefix` - current media query's prefix that will be added to the class name.
+`mediaQuery.prefixSeparator` - separator between media query prefix and feature class name.
+`mediaQuery.params` - media query params (valid css media query value).
 
-`features[any]` - (Boolean | Object).  
-`features[any].className` - (String) specify custom base class name.   
+`features[any]` - (Boolean | Object).
+`features[any].className` - (String) specify custom base class name.
 If not defined default base class name will be generated - `.display-none { display: none; }`.
-If empty, base class name won't be generated for example `features.display.className = ''` - `.none { display: none; }`. 
+If empty, base class name won't be generated for example `features.display.className = ''` - `.none { display: none; }`.
 
-`features[margin|padding][direction].className` - (String) specify custom base class name.  
-`features[margin|padding][direction].values` - (Array) list of desired values.  
-`features[margin|padding][direction].unit` - (String) unit. 
+`features[margin|padding][direction].className` - (String) specify custom base class name.
+`features[margin|padding][direction].values` - (Array) list of desired values.
+`features[margin|padding][direction].unit` - (String) unit.
 
-`features[fontSize|lineHeight|height|maxHeight|minHeight].className` - (String) specify custom base class name.  
-`features[fontSize|lineHeight|height|maxHeight|minHeight].values` - (Array) list of desired values.  
-`features[fontSize|lineHeight|height|maxHeight|minHeight].unit` - (String) unit.  
+`features[fontSize|lineHeight|height|maxHeight|minHeight].className` - (String) specify custom base class name.
+`features[fontSize|lineHeight|height|maxHeight|minHeight].values` - (Array) list of desired values.
+`features[fontSize|lineHeight|height|maxHeight|minHeight].unit` - (String) unit.
 
-`features[fontWeight].className` - (String) specify custom base class name.  
-`features[fontWeight].values` - (Array) list of desired values.  
+`features[fontWeight].className` - (String) specify custom base class name.
+`features[fontWeight].values` - (Array) list of desired values.
 
-`features[textSize].className` - (String) specify custom base class name.  
-`features[textSize].fontSizeUnit` - (String) font size custom unit.  
-`features[textSize].lineHeightUnit` - (String) font size custom unit.  
-`features[textSize].values` - (Array) array of objects.  
+`features[textSize].className` - (String) specify custom base class name.
+`features[textSize].fontSizeUnit` - (String) font size custom unit.
+`features[textSize].lineHeightUnit` - (String) font size custom unit.
+`features[textSize].values` - (Array) array of objects.
 
-`features[opacity].className` - (String) specify custom base class name.  
-`features[opacity].increment` - (Number) increment number.  
+`features[opacity].className` - (String) specify custom base class name.
+`features[opacity].increment` - (Number) increment number.
 
-`features[zIndex].className` - (String) specify custom base class name.  
-`features[zIndex].increment` - (Number) increment number.  
-`features[zIndex].limit` - (Number) z-index max value.  
+`features[zIndex].className` - (String) specify custom base class name.
+`features[zIndex].increment` - (Number) increment number.
+`features[zIndex].limit` - (Number) z-index max value.

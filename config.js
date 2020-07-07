@@ -76,6 +76,21 @@ module.exports = {
       className: 'justify'
     },
     margin: {
+      all: {
+        className: 'm',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      x: {
+        className: 'mx',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      y: {
+        className: 'my',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
       top: {
         className: 'mt',
         values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
@@ -115,6 +130,21 @@ module.exports = {
       increment: 10
     },
     padding: {
+      all: {
+        className: 'p',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      x: {
+        className: 'px',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
+      y: {
+        className: 'py',
+        values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],
+        unit: 'px'
+      },
       top: {
         className: 'pt',
         values: [4, 8, 12, 16, 20, 24, 28, 36, 48, 72, 96, 120],

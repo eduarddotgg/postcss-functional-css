@@ -313,6 +313,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
           features.margin(comment.parent, options, 'left');
           features.margin(comment.parent, options, 'right');
           features.margin(comment.parent, options, 'top');
+          features.margin(comment.parent, options, 'all');
+          features.margin(comment.parent, options, 'x');
+          features.margin(comment.parent, options, 'y');
         }
 
         if (options.mediaQueries.length) {
@@ -330,6 +333,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
             features.margin(atRule, options, 'left', classNamePrefix);
             features.margin(atRule, options, 'right', classNamePrefix);
             features.margin(atRule, options, 'top', classNamePrefix);
+            features.margin(atRule, options, 'all', classNamePrefix);
+            features.margin(atRule, options, 'x', classNamePrefix);
+            features.margin(atRule, options, 'y', classNamePrefix);
 
             comment.parent.append(atRule);
           });
@@ -434,6 +440,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
           features.padding(comment.parent, options, 'left');
           features.padding(comment.parent, options, 'right');
           features.padding(comment.parent, options, 'top');
+          features.padding(comment.parent, options, 'all');
+          features.padding(comment.parent, options, 'x');
+          features.padding(comment.parent, options, 'y');
         }
 
         if (options.mediaQueries.length) {
@@ -451,6 +460,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
             features.padding(atRule, options, 'left', classNamePrefix);
             features.padding(atRule, options, 'right', classNamePrefix);
             features.padding(atRule, options, 'top', classNamePrefix);
+            features.padding(atRule, options, 'all', classNamePrefix);
+            features.padding(atRule, options, 'x', classNamePrefix);
+            features.padding(atRule, options, 'y', classNamePrefix);
 
             comment.parent.append(atRule);
           });
@@ -616,6 +628,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
           features.margin(comment.parent, options, 'left');
           features.margin(comment.parent, options, 'right');
           features.margin(comment.parent, options, 'top');
+          features.margin(comment.parent, options, 'all');
+          features.margin(comment.parent, options, 'x');
+          features.margin(comment.parent, options, 'y');
           features.minHeight(comment.parent, options);
           features.maxHeight(comment.parent, options);
           features.objectFit(comment.parent, options);
@@ -624,6 +639,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
           features.padding(comment.parent, options, 'left');
           features.padding(comment.parent, options, 'right');
           features.padding(comment.parent, options, 'top');
+          features.padding(comment.parent, options, 'all');
+          features.padding(comment.parent, options, 'x');
+          features.padding(comment.parent, options, 'y');
           features.position(comment.parent, options);
           features.textAlignment(comment.parent, options);
           features.textSize(comment.parent, options);
@@ -660,6 +678,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
             features.margin(atRule, options, 'left', classNamePrefix);
             features.margin(atRule, options, 'right', classNamePrefix);
             features.margin(atRule, options, 'top', classNamePrefix);
+            features.margin(atRule, options, 'all', classNamePrefix);
+            features.margin(atRule, options, 'x', classNamePrefix);
+            features.margin(atRule, options, 'y', classNamePrefix);
             features.minHeight(atRule, options, classNamePrefix);
             features.maxHeight(atRule, options, classNamePrefix);
             features.objectFit(atRule, options, classNamePrefix);
@@ -668,6 +689,9 @@ module.exports = postcss.plugin('postcss-functional-css',  (opts) => {
             features.padding(atRule, options, 'left', classNamePrefix);
             features.padding(atRule, options, 'right', classNamePrefix);
             features.padding(atRule, options, 'top', classNamePrefix);
+            features.padding(atRule, options, 'all', classNamePrefix);
+            features.padding(atRule, options, 'x', classNamePrefix);
+            features.padding(atRule, options, 'y', classNamePrefix);
             features.position(atRule, options, classNamePrefix);
             features.textAlignment(atRule, options, classNamePrefix);
             features.textSize(atRule, options, classNamePrefix);
