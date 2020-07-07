@@ -13,7 +13,7 @@ module.exports = (node, config, direction, prefix) => {
     if (config.cssModules) {
       className = direction
     } else {
-      className = config.features.margin[direction].className || `padding-${direction}`;
+      className = config.features.padding[direction].className || `padding-${direction}`;
     }
 
     values.forEach(item => {

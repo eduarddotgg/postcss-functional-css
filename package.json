@@ -1,6 +1,6 @@
 {
   "name": "postcss-functional-css",
-  "version": "0.100.0",
+  "version": "0.100.1",
   "description": "PostCSS Functional CSS will help you to generate functional css.",
   "keywords": [
     "postcss",
@@ -16,13 +16,13 @@
   },
   "homepage": "https://github.com/iamfrntdv/postcss-functional-css",
   "dependencies": {
-    "lodash.camelcase": "^4.3.0",
-    "postcss": "^7.0.13"
+    "lodash.camelcase": "4.3.0",
+    "postcss": "7.0.32"
   },
   "devDependencies": {
-    "ava": "^1.1.0",
-    "eslint": "^5.12.1",
-    "eslint-config-postcss": "^3.0.7"
+    "ava": "3.10.0",
+    "eslint": "7.4.0",
+    "eslint-config-postcss": "4.0.0"
   },
   "scripts": {
     "lint": "eslint index.js",
