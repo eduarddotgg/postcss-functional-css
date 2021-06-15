@@ -17,7 +17,7 @@
   "homepage": "https://github.com/iamfrntdv/postcss-functional-css",
   "dependencies": {
     "lodash.camelcase": "4.3.0",
-    "postcss": "7.0.32"
+    "postcss": "7.0.36"
   },
   "devDependencies": {
     "ava": "3.10.0",
